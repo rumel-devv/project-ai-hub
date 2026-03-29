@@ -18,14 +18,14 @@ const Cart = ({carts,setCarts}) => {
 
     const totalPrice = carts.reduce((sum,item) => sum + item.price,0)
  return (
-   carts.length === 0 ? <div className='w-full md:w-9/12 mx-auto py-20 flex md:flex-col items-center ' > <GiShoppingCart className=' text-5xl'></GiShoppingCart> <p className='text-3xl font-bold'>Cart is empty</p> </div>  : <> <div className='w-full md:w-9/12 mx-auto py-20 space-y-6 '>
-            {carts.map(cart => <div key={cart.id} className='border border-gray-300 p-4 rounded-lg bg-gray-100 flex  items-center space-x-6'>
+   carts.length === 0 ? <div className='w-full md:w-9/12 mx-auto p-10  flex md:flex-col items-center ' > <GiShoppingCart className=' text-5xl'></GiShoppingCart> <p className='text-3xl font-bold'>Cart is empty</p> </div>  : <> <div className='w-full md:w-9/12 mx-auto py-20 space-y-6 '>
+            {carts.map(cart => <div key={cart.id} className='border border-gray-300 p-4 rounded-lg bg-gray-100 flex  items-center space-x-2 md:space-x-7'>
                 <img className='w-30 h-25' src={cart.image} alt='image'></img>
                 <div className='w-190'>
                     <h2 className='text-2xl font-bold'>{cart.title}</h2>
-                    <p> {cart.description} </p>
+                    <p className='hidden md:block'> {cart.description} </p>
                 </div>
-               <h2 className='text-2xl font-bold'>${cart.price} <br></br> /month</h2> 
+               <h2 className='text-xl md:text-2xl font-bold'>${cart.price}  /month</h2> 
                <RiDeleteBin6Fill onClick={()=>handleDelete(cart)} className='text-2xl text-red-500'></RiDeleteBin6Fill>
             </div>
         )}
