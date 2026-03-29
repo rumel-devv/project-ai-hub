@@ -9,7 +9,7 @@ import { ToastContainer } from 'react-toastify'
 
 
 const getModels = async () => {
-  const res = await fetch('/public/models.json')
+  const res = await fetch('/models.json')
   return res.json()
 }
 // console.log(getModels);
