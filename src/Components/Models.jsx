@@ -13,7 +13,7 @@ const Models = ({modelPromise,carts,setCarts}) => {
            
 
            {/* Mappint models */}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-3'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-y-3 p-3'>
           {models.map(model  =>  <ModelCrad carts={carts} setCarts={setCarts} model={model} key={model.id} ></ModelCrad>)}
           
           </div>
